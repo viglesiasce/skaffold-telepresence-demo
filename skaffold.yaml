@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta11
+kind: Config
+build:
+  artifacts:
+  - image: react-reload
+    context: app
+    sync:
+      manual:
+      - src: 'src/components/*'
+        dest: .
+      - src: 'src/styles/*'
+        dest: .
