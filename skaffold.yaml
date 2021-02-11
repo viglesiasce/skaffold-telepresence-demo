@@ -10,3 +10,13 @@ build:
         dest: .
       - src: 'src/styles/*'
         dest: .
+# Profile for production
+profiles:
+  - name: prod
+    build:
+      artifacts:
+      - image: react-reload
+        context: app
+      tagPolicy:
+        customTemplate:
+          template: prod
